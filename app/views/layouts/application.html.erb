@@ -6,11 +6,8 @@
     <%= csp_meta_tag %>
     
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> 
-
-    
-    
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>  
+        
   </head>
 
   <body id="page-top">
@@ -23,9 +20,12 @@
       <div id="content-wrapper" class="d-flex flex-column">
         <!-- Main Content -->
         <div id="content">
-          <!-- Topbar -->
+          <!-- Topbar -->          
           <%= render 'shared/content' %>
+          <%= render 'shared/cards' %>
           <!-- End of Topbar -->
+
+          
 
           <!-- Begin Page Content -->
           <div class="container-fluid">
