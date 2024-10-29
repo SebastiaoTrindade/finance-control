@@ -1,2 +1,62 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Usuários</title>
+  <link rel="stylesheet" href="/app/assets/stylesheets/auth.css">
+</head>
+<body class="body-signup">
+  <!-- Section: Design Block -->
+  <section>
+    <!-- Jumbotron -->
+    <div class="px-3 py-5 px-md-5 text-center text-lg-start">
+      <div class="container-fluid signup">
+        <div class="row gx-lg-5 align-items-center">
+          <!-- Imagem -->
+          <div class="col-md-6 mb-4 mb-md-0 text-center">
+            <img src="https://mspublicschoolpremnagar.com/login/images/logo/login.gif" alt="Logo" class="img-fluid">
+          </div>
+
+          <!-- Formulário -->
+          <div class="col-md-6">
+            <h2 class="mb-4">Cadastro de Usuários</h2> 
+            <div class="card">
+              <div class="card-body py-5 px-md-5">
+                <form>
+                  <!-- Nome -->
+                  <div class="form-outline mb-4">                  
+                    <input type="text" id="form3Example1" class="form-control" placeholder="Entre com seu nome" />                  
+                  </div>
+                  
+                  <!-- E-mail -->
+                  <div class="form-outline mb-4">                  
+                    <input type="email" id="form3Example2" class="form-control" placeholder="Entre com seu email"/>                  
+                  </div>
+                  
+                  <!-- Senha -->
+                  <div class="form-outline mb-4">                  
+                    <input type="password" id="form3Example3" class="form-control" placeholder="Digite sua senha" />                  
+                  </div>
+
+                  <!-- Confirmação de Senha -->
+                  <div class="form-outline mb-4">                  
+                    <input type="password" id="form3Example4" class="form-control" placeholder="Confirme sua senha" />                  
+                  </div>               
+                  
+                  <!-- Botão de Cadastro -->
+                  <button type="submit" class="btn btn-success btn-block mb-4">
+                    Cadastrar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+</body>
+</html>

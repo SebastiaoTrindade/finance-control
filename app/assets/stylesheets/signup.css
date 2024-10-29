@@ -1,0 +1,23 @@
+/* app/assets/stylesheets/signup.css */
+.body-signup{
+    background: none;
+    background-color:#fff;
+}
+
+.signup{
+    background-color: #fff;
+}
+
+.container img{
+    width: 80%;
+}
+
+h1,h2,h3{
+    color: #58d68d;
+    font-weight: bold;
+}
+
+.card{
+    border:2px solid #d5f5e3;
+}
+

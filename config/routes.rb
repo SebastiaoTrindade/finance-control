@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  get 'users/new'
-  get 'users/create'
+  # Session User
+  get 'signup', to: 'users#new'
+  resources :users, only: [:new, :create]
+  
   # Session Login
   root 'sessions#new'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
-  delete 'logout', to: 'sessions#destroy'
-
-  resources :users, only: [:new, :create]
+  delete 'logout', to: 'sessions#destroy' 
 
   # Session Dashboard
   #root 'dashboard#index'
