@@ -10,7 +10,8 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in(user)
       session[:user_id] = user.id
-      redirect_to dashboard_path, notice: "Login realizado com sucesso!"      
+      flash[:success] = "Login realizado com sucesso!" 
+      redirect_to dashboard_path     
     else
       flash.now[:danger] = "Email ou senha inválidos"
       render 'new'

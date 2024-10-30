@@ -12,5 +12,9 @@ Rails.application.routes.draw do
   # Session Dashboard
   #root 'dashboard#index'
   get 'dashboard', to:'dashboard#index'
+
+  # Category
+  resources :categories
+
   
 end
