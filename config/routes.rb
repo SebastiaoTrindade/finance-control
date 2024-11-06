@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   # Session User
   get 'signup', to: 'users#new'
   resources :users, only: [:new, :create]
@@ -15,6 +16,9 @@ Rails.application.routes.draw do
 
   # Category
   resources :categories
+
+  # Transactions
+  resources :transactions
 
   
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_10_30_170837) do
+ActiveRecord::Schema.define(version: 2024_11_06_180535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 2024_10_30_170837) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "transactions", force: :cascade do |t|
+    t.decimal "amount"
+    t.bigint "category_id"
+    t.date "transaction_date"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_transactions_on_category_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -30,4 +40,5 @@ ActiveRecord::Schema.define(version: 2024_10_30_170837) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "transactions", "categories"
 end

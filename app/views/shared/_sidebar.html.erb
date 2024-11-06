@@ -99,6 +99,14 @@
         </a>
     </li>
 
+    <!-- Botão Transação -->
+    <li class="nav-item">
+        <a class="nav-link" href="<%= transactions_path %>">
+          <i class="far fa-money-bill-alt"></i>
+          <span>Transação</span>
+        </a>
+    </li>
+
     <!-- Logout -->
     <li class="nav-item">
         <%= link_to logout_path, method: :delete, class: "nav-link", data: { confirm: "Você tem certeza que deseja sair?" }, title: "Logout" do %>
