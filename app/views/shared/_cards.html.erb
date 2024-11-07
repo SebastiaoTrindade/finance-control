@@ -10,7 +10,9 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Despesas
                             </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">R$ 0,00</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                R$ <%= number_to_currency(@total_despesas, unit: "R$", separator: ",", delimiter: ".") %>
+                            </div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -89,4 +91,3 @@
         </div>
     </div>
 </div>
-<!-- Content Row -->
