@@ -1,33 +1,34 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? %>
+  <p id="notice" class="alert alert-info"><%= notice %></p>
+<% end %>
 
-<h1>Transactions</h1>
+<h1>Transações</h1>
+<%= link_to 'Nova Transação', new_transaction_path, class: 'btn btn-primary mb-3' %>
 
-<table>
-  <thead>
+<table class="table table-striped table-hover">
+  <thead class="thead-dark">
     <tr>
-      <th>Amount</th>
-      <th>Category</th>
-      <th>Transaction date</th>
-      <th>Description</th>
-      <th colspan="3"></th>
+      <th>Valor</th>
+      <th>Categoria</th>
+      <th>Data da Transação</th>
+      <th>Descrição</th>
+      <th>Ações</th>
     </tr>
   </thead>
 
   <tbody>
     <% @transactions.each do |transaction| %>
       <tr>
-        <td><%= transaction.amount %></td>
-        <td><%= transaction.category %></td>
-        <td><%= transaction.transaction_date %></td>
+        <td><%= number_to_currency(transaction.amount) %></td>
+        <td><%= transaction.category.name %></td>
+        <td><%= l(transaction.transaction_date, format: :long) %></td>
         <td><%= transaction.description %></td>
-        <td><%= link_to 'Show', transaction %></td>
-        <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
-        <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Ver', transaction, class: 'btn btn-sm btn-info' %>
+          <%= link_to 'Editar', edit_transaction_path(transaction), class: 'btn btn-sm btn-warning' %>
+          <%= link_to 'Excluir', transaction, method: :delete, data: { confirm: 'Tem certeza?' }, class: 'btn btn-sm btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Transaction', new_transaction_path %>

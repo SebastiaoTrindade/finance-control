@@ -1,6 +1,7 @@
 class TransactionsController < ApplicationController
   before_action :logged_in_user
   before_action :set_transaction, only: %i[ show edit update destroy ]
+  layout 'dashboard_yeld'
 
   # GET /transactions or /transactions.json
   def index

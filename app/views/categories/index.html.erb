@@ -18,8 +18,7 @@
       <% @categories.each do |category| %>
         <tr>
           <td><%= category.name %></td>
-          <td><%= category.category_type %></td>
-          <td><%= link_to 'Mostrar', category, class: 'btn btn-primary btn-sm' %></td>
+          <td><%= category.category_type %></td>          
           <td><%= link_to 'Editar', edit_category_path(category), class: 'btn btn-warning btn-sm' %></td>
           <td><%= link_to 'Excluir', category, method: :delete, data: { confirm: 'Tem certeza que deseja excluir?' }, class: 'btn btn-danger btn-sm' %></td>
         </tr>

@@ -1,24 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Amount:</strong>
-  <%= @transaction.amount %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @transaction.category %>
-</p>
-
-<p>
-  <strong>Transaction date:</strong>
-  <%= @transaction.transaction_date %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @transaction.description %>
-</p>
-
-<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
-<%= link_to 'Back', transactions_path %>
+<div class="card">
+  <div class="card-header">
+    <h2>Detalhes da Transação</h2>
+  </div>
+  <div class="card-body">
+    <p><strong>Valor:</strong> <%= number_to_currency(@transaction.amount) %></p>
+    <p><strong>Categoria:</strong> <%= @transaction.category.name %></p>
+    <p><strong>Data da Transação:</strong> <%= l(@transaction.transaction_date, format: :long) %></p>
+    <p><strong>Descrição:</strong> <%= @transaction.description %></p>
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Editar', edit_transaction_path(@transaction), class: 'btn btn-warning' %>
+    <%= link_to 'Voltar', transactions_path, class: 'btn btn-secondary' %>
+  </div>
+</div>

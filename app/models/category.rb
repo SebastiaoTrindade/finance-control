@@ -1,6 +1,6 @@
 class Category < ApplicationRecord
   validates :name, presence: true, uniqueness: true
-  validates :category_type, presence: true, inclusion: { in: ['Despesa', 'Receita']} 
-  enum category_type: { receita: 'receita', despesa: 'despesa'}
+  validates :category_type, presence: true 
+  enum category_type: { receita: 'Receita', despesa: 'Despesa'}
   
 end
