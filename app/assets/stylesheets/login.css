@@ -1,92 +1,50 @@
-/*Tela de login*/
-@import url('https://fonts.googleapis.com/css?family=Numans');
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://cdn.pixabay.com/photo/2023/06/06/15/55/finance-8045003_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }
+  #login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 380px;
+    border: 1px solid #9C9C9C;
+    background-color: rgba(0,0,0,0.7) !important;
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -103px;
+  }
 
-body{
-background-image: url('https://cdn.pixabay.com/photo/2023/06/06/15/55/finance-8045003_1280.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
-font-family: 'Numans', sans-serif;
-}
+  #notice {
+    transition: opacity 1s ease-out; 
+  }
 
-.container{
-height: 100%;
-align-content: center;
-}
+  .form h3{
+    color: white;
+    font-weight: bold;
+  }
 
-.card-login{
-height: 370px;
-margin-top: 100px;
-/*margin-bottom: auto;*/
-width: 400px;
-background-color: rgba(0,0,0,0.5) !important;
-}
+  .input-group-prepend span{
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border:0 !important;
+  }
 
-.social_icon span{
-font-size: 60px;
-margin-left: 10px;
-color: #FFC312;
-}
-
-.social_icon span:hover{
-color: white;
-cursor: pointer;
-}
-
-.card-header h3{
-color: white;
-font-weight: bold;
-}
-
-.social_icon{
-position: absolute;
-right: 20px;
-top: -45px;
-}
-
-.input-group-prepend span{
-width: 50px;
-background-color: #FFC312;
-color: black;
-border:0 !important;
-}
-
-input:focus{
-outline: 0 0 0 0  !important;
-box-shadow: 0 0 0 0 !important;
-
-}
-
-.remember{
-color: white;
-}
-
-.remember input
-{
-width: 20px;
-height: 20px;
-margin-left: 15px;
-margin-right: 5px;
-}
-
-.form-group .login_button{
-color: black;
-background-color: #FFC312;
-width: 100px;
-}
-
-.form-group .login_button:hover{
-color: black;
-background-color: white;
-}
-
-.links{
-color: white;
-}
-
-.links a{
-margin-left: 4px;
-}
-
-
-
+  .form-group .btn-warning{
+    color: black;
+    background-color: #FFC312;
+    width: 100px;
+    font-weight: bold;
+  }
+    
+  .form-group .btn-warning:hover{
+    color: black;
+    background-color: white;
+  }
